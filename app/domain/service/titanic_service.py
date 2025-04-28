@@ -150,9 +150,9 @@ class TitanicService:
     @staticmethod
     def extract_title_from_name(this):
         # for i in [this.train, this.test]:
-        #     i['Name'].str.extract('([A-Za-z]+)\.', expand = False)
+        #     i['Name'].str.extract('([A-Za-z]+)\\.', expand = False)
 
-        [i.__setitem__('Title',i['Name'].str.extract('([A-Za-z]+)\.', expand = False)) 
+        [i.__setitem__('Title',i['Name'].str.extract('([A-Za-z]+)\\.', expand = False)) 
                       for i in [this.train, this.test]] 
         return this
     
